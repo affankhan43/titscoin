@@ -21,7 +21,7 @@ const uint64_t DIFFICULTY_TARGET                             = 30; // seconds
 const uint32_t CRYPTONOTE_MAX_BLOCK_NUMBER                   = 500000000;
 const size_t   CRYPTONOTE_MAX_BLOCK_BLOB_SIZE                = 500000000;
 const size_t   CRYPTONOTE_MAX_TX_SIZE                        = 1000000000;
-const uint64_t CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX       = 844191;
+const uint64_t CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX       = 614815;
 const uint32_t CRYPTONOTE_MINED_MONEY_UNLOCK_WINDOW          = 40;
 const uint64_t CRYPTONOTE_BLOCK_FUTURE_TIME_LIMIT            = 60 * 60 * 2;
 const uint64_t CRYPTONOTE_BLOCK_FUTURE_TIME_LIMIT_V3         = 3 * DIFFICULTY_TARGET;
@@ -188,7 +188,7 @@ const char     P2P_NET_DATA_FILENAME[]                       = "p2pstate.bin";
 const char     MINER_CONFIG_FILE_NAME[]                      = "miner_conf.json";
 } // parameters
 
-const char     CRYPTONOTE_NAME[]                             = "Titcoin";
+const char     CRYPTONOTE_NAME[]                             = "Titscoin";
 
 const uint8_t  TRANSACTION_VERSION_1                         =  1;
 const uint8_t  TRANSACTION_VERSION_2                         =  2;
@@ -242,7 +242,7 @@ const char     LATEST_VERSION_URL[]                          = "";
 const std::string LICENSE_URL                                = "";
 const static   boost::uuids::uuid CRYPTONOTE_NETWORK         =
 {
-    {  0xb6, 0x0c, 0x4a, 0x6c, 0xcf, 0x52, 0x58, 0x43, 0x65, 0xf9, 0x92, 0xa5, 0xb6, 0xc1, 0x43, 0xe7  }
+    {  0xb6, 0x0c, 0x4a, 0x6d, 0xce, 0x52, 0x58, 0x43, 0x65, 0xf9, 0x92, 0xa5, 0xb6, 0xc1, 0x43, 0xe7  }
 };
 
 const char* const SEED_NODES[] = {
