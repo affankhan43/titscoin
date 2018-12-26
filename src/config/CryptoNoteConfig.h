@@ -32,15 +32,15 @@ const size_t   BLOCKCHAIN_TIMESTAMP_CHECK_WINDOW_V3          = 11;
 
 // MONEY_SUPPLY - total number coins to be generated
 const uint64_t MONEY_SUPPLY                                  = UINT64_C(15000000000000);
-const uint32_t ZAWY_DIFFICULTY_BLOCK_INDEX                   = 15000;
-const size_t   ZAWY_DIFFICULTY_V2                            = 0;
+const uint32_t ZAWY_DIFFICULTY_BLOCK_INDEX                   = 120000000000;
+const size_t   ZAWY_DIFFICULTY_V2                            = 150000000000;
 const uint8_t  ZAWY_DIFFICULTY_DIFFICULTY_BLOCK_VERSION      = 3;
 
-const uint64_t LWMA_2_DIFFICULTY_BLOCK_INDEX                 = 1200000000;
-const uint64_t LWMA_2_DIFFICULTY_BLOCK_INDEX_V2              = 1500000000;
-const uint64_t LWMA_2_DIFFICULTY_BLOCK_INDEX_V3              = 1600000000;
+const uint64_t LWMA_2_DIFFICULTY_BLOCK_INDEX                 = 120000000000;
+const uint64_t LWMA_2_DIFFICULTY_BLOCK_INDEX_V2              = 150000000000;
+const uint64_t LWMA_2_DIFFICULTY_BLOCK_INDEX_V3              = 160000000000;
 
-const uint64_t LWMA_3_DIFFICULTY_BLOCK_INDEX                 = 1620000000;
+const uint64_t LWMA_3_DIFFICULTY_BLOCK_INDEX                 = 162000000000;
 
 const unsigned EMISSION_SPEED_FACTOR                         = 25;
 static_assert(EMISSION_SPEED_FACTOR <= 8 * sizeof(uint64_t), "Bad EMISSION_SPEED_FACTOR");
@@ -113,7 +113,7 @@ const uint64_t DEFAULT_DUST_THRESHOLD                        = UINT64_C(10);
 const uint64_t DEFAULT_DUST_THRESHOLD_V2                     = UINT64_C(0);
 
 const uint32_t DUST_THRESHOLD_V2_HEIGHT                      = MIXIN_LIMITS_V2_HEIGHT;
-const uint32_t FUSION_DUST_THRESHOLD_HEIGHT_V2               = 800000;
+const uint32_t FUSION_DUST_THRESHOLD_HEIGHT_V2               = 120000000000;
 const uint64_t EXPECTED_NUMBER_OF_BLOCKS_PER_DAY             = 24 * 60 * 60 / DIFFICULTY_TARGET;
 
 const size_t   DIFFICULTY_WINDOW                             = 17;
