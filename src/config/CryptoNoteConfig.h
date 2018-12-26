@@ -21,7 +21,7 @@ const uint64_t DIFFICULTY_TARGET                             = 60; // seconds
 const uint32_t CRYPTONOTE_MAX_BLOCK_NUMBER                   = 500000000;
 const size_t   CRYPTONOTE_MAX_BLOCK_BLOB_SIZE                = 500000000;
 const size_t   CRYPTONOTE_MAX_TX_SIZE                        = 1000000000;
-const uint64_t CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX       = 614815;
+const uint64_t CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX       = 3914525;
 const uint32_t CRYPTONOTE_MINED_MONEY_UNLOCK_WINDOW          = 40;
 const uint64_t CRYPTONOTE_BLOCK_FUTURE_TIME_LIMIT            = 60 * 60 * 2;
 const uint64_t CRYPTONOTE_BLOCK_FUTURE_TIME_LIMIT_V3         = 3 * DIFFICULTY_TARGET;
@@ -32,15 +32,15 @@ const size_t   BLOCKCHAIN_TIMESTAMP_CHECK_WINDOW_V3          = 11;
 
 // MONEY_SUPPLY - total number coins to be generated
 const uint64_t MONEY_SUPPLY                                  = UINT64_C(15000000000000);
-const uint32_t ZAWY_DIFFICULTY_BLOCK_INDEX                   = 120000000000;
-const size_t   ZAWY_DIFFICULTY_V2                            = 150000000000;
+const uint32_t ZAWY_DIFFICULTY_BLOCK_INDEX                   = 187;
+const size_t   ZAWY_DIFFICULTY_V2                            = 0;
 const uint8_t  ZAWY_DIFFICULTY_DIFFICULTY_BLOCK_VERSION      = 3;
 
-const uint64_t LWMA_2_DIFFICULTY_BLOCK_INDEX                 = 120000000000;
-const uint64_t LWMA_2_DIFFICULTY_BLOCK_INDEX_V2              = 150000000000;
-const uint64_t LWMA_2_DIFFICULTY_BLOCK_INDEX_V3              = 160000000000;
+const uint64_t LWMA_2_DIFFICULTY_BLOCK_INDEX                 = 620;
+const uint64_t LWMA_2_DIFFICULTY_BLOCK_INDEX_V2              = 700;
+const uint64_t LWMA_2_DIFFICULTY_BLOCK_INDEX_V3              = 800;
 
-const uint64_t LWMA_3_DIFFICULTY_BLOCK_INDEX                 = 162000000000;
+const uint64_t LWMA_3_DIFFICULTY_BLOCK_INDEX                 = 1200;
 
 const unsigned EMISSION_SPEED_FACTOR                         = 25;
 static_assert(EMISSION_SPEED_FACTOR <= 8 * sizeof(uint64_t), "Bad EMISSION_SPEED_FACTOR");
@@ -70,11 +70,11 @@ TurtleCoind --print-genesis-tx --genesis-block-reward-address TRTLv2Fyavy8CXG8BP
 */
 const char     GENESIS_COINBASE_TX_HEX[]                     = "012801ff000101029b2e4c0281c0b02e7c53291a94d1d0cbff8883f8024f5142ee494ffbbd088071210197b40c1474a57e4178e0a8c51ff18aac1bd9b69c5befa9b413464091dfc7b2ab";
 //static_assert(sizeof(GENESIS_COINBASE_TX_HEX)/sizeof(*GENESIS_COINBASE_TX_HEX) != 1, "GENESIS_COINBASE_TX_HEX must not be empty.");
-const uint64_t GENESIS_BLOCK_TIMESTAMP                       = 1512800692;
 
 /* This is the unix timestamp of the first "mined" block (technically block 2, not the genesis block)
    You can get this value by doing "print_block 2" in TurtleCoind. It is used to know what timestamp
    to import from when the block height cannot be found in the node or the node is offline. */
+const uint64_t GENESIS_BLOCK_TIMESTAMP                       = 1545822512;
 
 const size_t   CRYPTONOTE_REWARD_BLOCKS_WINDOW               = 100;
 const size_t   CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE     = 100000; //size of block (bytes) after which reward for block calculated using block size
@@ -98,9 +98,9 @@ const uint64_t MINIMUM_MIXIN_V3                              = 3;
 const uint64_t MAXIMUM_MIXIN_V3                              = 3;
 
 /* The heights to activate the mixin limits at */
-const uint32_t MIXIN_LIMITS_V1_HEIGHT                        = 20;
-const uint32_t MIXIN_LIMITS_V2_HEIGHT                        = 50;
-const uint32_t MIXIN_LIMITS_V3_HEIGHT                        = 100;
+const uint32_t MIXIN_LIMITS_V1_HEIGHT                        = 440;
+const uint32_t MIXIN_LIMITS_V2_HEIGHT                        = 620;
+const uint32_t MIXIN_LIMITS_V3_HEIGHT                        = 800;
 
 /* The mixin to use by default with zedwallet and turtle-service */
 /* DEFAULT_MIXIN_V0 is the mixin used before MIXIN_LIMITS_V1_HEIGHT is started */
@@ -113,7 +113,7 @@ const uint64_t DEFAULT_DUST_THRESHOLD                        = UINT64_C(10);
 const uint64_t DEFAULT_DUST_THRESHOLD_V2                     = UINT64_C(0);
 
 const uint32_t DUST_THRESHOLD_V2_HEIGHT                      = MIXIN_LIMITS_V2_HEIGHT;
-const uint32_t FUSION_DUST_THRESHOLD_HEIGHT_V2               = 120000000000;
+const uint32_t FUSION_DUST_THRESHOLD_HEIGHT_V2               = 800000;
 const uint64_t EXPECTED_NUMBER_OF_BLOCKS_PER_DAY             = 24 * 60 * 60 / DIFFICULTY_TARGET;
 
 const size_t   DIFFICULTY_WINDOW                             = 17;
@@ -148,9 +148,9 @@ const size_t   FUSION_TX_MIN_IN_OUT_COUNT_RATIO              = 4;
 
 const uint32_t KEY_IMAGE_CHECKING_BLOCK_INDEX                = 0;
 
-const uint32_t UPGRADE_HEIGHT_V2                             = 30000;
-const uint32_t UPGRADE_HEIGHT_V3                             = 35000;
-const uint32_t UPGRADE_HEIGHT_V4                             = 45000; // Upgrade height for CN-Lite Variant 1 switch.
+const uint32_t UPGRADE_HEIGHT_V2                             = 1;
+const uint32_t UPGRADE_HEIGHT_V3                             = 2;
+const uint32_t UPGRADE_HEIGHT_V4                             = 350; // Upgrade height for CN-Lite Variant 1 switch.
 const uint32_t UPGRADE_HEIGHT_CURRENT                        = UPGRADE_HEIGHT_V4;
 
 const unsigned UPGRADE_VOTING_THRESHOLD                      = 90;               // percent
@@ -239,13 +239,13 @@ const uint32_t DATABASE_DEFAULT_MAX_OPEN_FILES               = 100;
 const uint16_t DATABASE_DEFAULT_BACKGROUND_THREADS_COUNT     = 2;
 
 const char     LATEST_VERSION_URL[]                          = "";
-const std::string LICENSE_URL                                = "";
+const std::string LICENSE_URL                                = "https://github.com/turtlecoin/turtlecoin/blob/master/LICENSE";
 const static   boost::uuids::uuid CRYPTONOTE_NETWORK         =
 {
     {  0xb6, 0x0c, 0x4a, 0x6d, 0xce, 0x52, 0x58, 0x43, 0x65, 0xf9, 0x92, 0xa5, 0xb6, 0xc1, 0x43, 0xe7  }
 };
 
 const char* const SEED_NODES[] = {
-  "23.100.125.89:9221"
+  "23.100.125.89"
 };
 } // CryptoNote
