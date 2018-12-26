@@ -16,7 +16,7 @@
 namespace CryptoNote {
 namespace parameters {
 
-const uint64_t DIFFICULTY_TARGET                             = 30; // seconds
+const uint64_t DIFFICULTY_TARGET                             = 60; // seconds
 
 const uint32_t CRYPTONOTE_MAX_BLOCK_NUMBER                   = 500000000;
 const size_t   CRYPTONOTE_MAX_BLOCK_BLOB_SIZE                = 500000000;
@@ -36,11 +36,11 @@ const uint32_t ZAWY_DIFFICULTY_BLOCK_INDEX                   = 15000;
 const size_t   ZAWY_DIFFICULTY_V2                            = 0;
 const uint8_t  ZAWY_DIFFICULTY_DIFFICULTY_BLOCK_VERSION      = 3;
 
-const uint64_t LWMA_2_DIFFICULTY_BLOCK_INDEX                 = 0;
-const uint64_t LWMA_2_DIFFICULTY_BLOCK_INDEX_V2              = 0;
-const uint64_t LWMA_2_DIFFICULTY_BLOCK_INDEX_V3              = 0;
+const uint64_t LWMA_2_DIFFICULTY_BLOCK_INDEX                 = 12000;
+const uint64_t LWMA_2_DIFFICULTY_BLOCK_INDEX_V2              = 15000;
+const uint64_t LWMA_2_DIFFICULTY_BLOCK_INDEX_V3              = 16000;
 
-const uint64_t LWMA_3_DIFFICULTY_BLOCK_INDEX                 = 0;
+const uint64_t LWMA_3_DIFFICULTY_BLOCK_INDEX                 = ;
 
 const unsigned EMISSION_SPEED_FACTOR                         = 25;
 static_assert(EMISSION_SPEED_FACTOR <= 8 * sizeof(uint64_t), "Bad EMISSION_SPEED_FACTOR");
