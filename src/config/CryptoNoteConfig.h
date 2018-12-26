@@ -68,7 +68,7 @@ TurtleCoind --print-genesis-tx --genesis-block-reward-address TRTLv2Fyavy8CXG8BP
 * You should see your premine appear in the previously generated wallet.
 
 */
-const char     GENESIS_COINBASE_TX_HEX[]                     = "012801ff000101029b2e4c0281c0b02e7c53291a94d1d0cbff8883f8024f5142ee494ffbbd088071210129b7989e0155e6245b92c6b967ae01ca9ab95b783c3528727338e6d9f222117a";
+const char     GENESIS_COINBASE_TX_HEX[]                     = "012801ff000101029b2e4c0281c0b02e7c53291a94d1d0cbff8883f8024f5142ee494ffbbd08807121011558c807d20e98ea1412433e0d456bdf5b180f7f2ec274a8be4301f036696206";
 //static_assert(sizeof(GENESIS_COINBASE_TX_HEX)/sizeof(*GENESIS_COINBASE_TX_HEX) != 1, "GENESIS_COINBASE_TX_HEX must not be empty.");
 
 /* This is the unix timestamp of the first "mined" block (technically block 2, not the genesis block)
@@ -148,9 +148,9 @@ const size_t   FUSION_TX_MIN_IN_OUT_COUNT_RATIO              = 4;
 
 const uint32_t KEY_IMAGE_CHECKING_BLOCK_INDEX                = 0;
 
-const uint32_t UPGRADE_HEIGHT_V2                             = 10000000000000;
-const uint32_t UPGRADE_HEIGHT_V3                             = 10000000000000;
-const uint32_t UPGRADE_HEIGHT_V4                             = 10000000000000; // Upgrade height for CN-Lite Variant 1 switch.
+const uint32_t UPGRADE_HEIGHT_V2                             = 100000000000;
+const uint32_t UPGRADE_HEIGHT_V3                             = 100000000000;
+const uint32_t UPGRADE_HEIGHT_V4                             = 100000000000; // Upgrade height for CN-Lite Variant 1 switch.
 const uint32_t UPGRADE_HEIGHT_CURRENT                        = UPGRADE_HEIGHT_V4;
 
 const unsigned UPGRADE_VOTING_THRESHOLD                      = 90;               // percent
